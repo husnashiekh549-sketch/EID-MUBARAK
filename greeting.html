@@ -55,10 +55,8 @@
       animation: swing 3s ease-in-out infinite;
     }
 
-    /* Different string lengths */
     .short { height: 80px; }
     .medium { height: 120px; }
-    .long { height: 170px; }
 
     .string {
       width: 2px;
@@ -78,7 +76,6 @@
       filter: drop-shadow(0 0 8px gold);
     }
 
-    /* Slight variation in movement */
     .slow { animation-duration: 4s; }
     .fast { animation-duration: 2s; }
 
@@ -86,6 +83,13 @@
       0% { transform: rotate(3deg); }
       50% { transform: rotate(-3deg); }
       100% { transform: rotate(3deg); }
+    }
+
+    @media (max-width: 768px) {
+      /* On medium/small screens, remove long strings & emojis */
+      .hang.long, .hang .shape:nth-child(2):not(.short):not(.medium) {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -97,59 +101,44 @@
   <div class="lap lap2"></div>
   <div class="lap lap3"></div>
 
-  <!-- Hanging Decorations (10 items) -->
+  <!-- Hanging Decorations -->
   <div class="decorations">
-
-    <div class="hang fast" style="left: 5%;">
+    <div class="hang fast" style="left:5%;">
       <div class="string short"></div>
       <div class="shape">🌙</div>
     </div>
-
-    <div class="hang slow" style="left: 12%;">
-      <div class="string long"></div>
+    <div class="hang slow" style="left:15%;">
+      <div class="string medium"></div>
       <div class="shape">⭐</div>
     </div>
-
-    <div class="hang" style="left: 20%;">
-      <div class="string medium"></div>
-      <div class="shape">☁️</div>
-    </div>
-
-    <div class="hang fast" style="left: 30%;">
+    <div class="hang fast" style="left:25%;">
       <div class="string short"></div>
-      <div class="shape">🕌</div>
-    </div>
-
-    <div class="hang slow" style="left: 40%;">
-      <div class="string long"></div>
       <div class="shape">🌙</div>
     </div>
-
-    <div class="hang" style="left: 50%;">
+    <div class="hang slow" style="left:35%;">
       <div class="string medium"></div>
       <div class="shape">⭐</div>
     </div>
-
-    <div class="hang fast" style="left: 60%;">
+    <div class="hang fast" style="left:45%;">
       <div class="string short"></div>
-      <div class="shape">☁️</div>
-    </div>
-
-    <div class="hang slow" style="left: 70%;">
-      <div class="string long"></div>
       <div class="shape">🌙</div>
     </div>
-
-    <div class="hang" style="left: 80%;">
+    <div class="hang slow" style="left:55%;">
       <div class="string medium"></div>
       <div class="shape">⭐</div>
     </div>
-
-    <div class="hang fast" style="left: 90%;">
+    <div class="hang fast" style="left:65%;">
       <div class="string short"></div>
-      <div class="shape">☁️</div>
+      <div class="shape">🌙</div>
     </div>
-
+    <div class="hang slow" style="left:75%;">
+      <div class="string medium"></div>
+      <div class="shape">⭐</div>
+    </div>
+    <div class="hang fast" style="left:85%;">
+      <div class="string short"></div>
+      <div class="shape">🌙</div>
+    </div>
   </div>
 
   <!-- Greeting card -->
