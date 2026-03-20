@@ -76,6 +76,13 @@
       filter: drop-shadow(0 0 8px gold);
     }
 
+    /* Make emojis smaller on mobile */
+    @media (max-width: 640px) {
+      .shape {
+        font-size: 1.5rem;
+      }
+    }
+
     .slow { animation-duration: 4s; }
     .fast { animation-duration: 2s; }
 
@@ -83,13 +90,6 @@
       0% { transform: rotate(3deg); }
       50% { transform: rotate(-3deg); }
       100% { transform: rotate(3deg); }
-    }
-
-    @media (max-width: 768px) {
-      /* On medium/small screens, remove long strings & emojis */
-      .hang.long, .hang .shape:nth-child(2):not(.short):not(.medium) {
-        display: none;
-      }
     }
   </style>
 </head>
@@ -103,6 +103,7 @@
 
   <!-- Hanging Decorations -->
   <div class="decorations">
+    <!-- Keep only 🌙 and ⭐ for all screens -->
     <div class="hang fast" style="left:5%;">
       <div class="string short"></div>
       <div class="shape">🌙</div>
