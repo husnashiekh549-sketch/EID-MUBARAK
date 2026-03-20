@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eid Greeting</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Top blur decorative shapes */
+    .lap {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.5;
+      filter: blur(20px);
+    }
+    .lap1 {
+      width: 200px;
+      height: 100px;
+      top: -50px;
+      left: -30px;
+      background: linear-gradient(135deg, #FDE68A, #FBBF24);
+    }
+    .lap2 {
+      width: 250px;
+      height: 120px;
+      top: -60px;
+      right: -40px;
+      background: linear-gradient(135deg, #93C5FD, #3B82F6);
+    }
+    .lap3 {
+      width: 150px;
+      height: 80px;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #FCA5A5, #F87171);
+    }
+
+    /* Hanging decorations */
+    .decorations {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hang {
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: swing 3s ease-in-out infinite;
+    }
+
+    /* Different string lengths */
+    .short { height: 80px; }
+    .medium { height: 120px; }
+    .long { height: 170px; }
+
+    .string {
+      width: 2px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #facc15,
+        #facc15 5px,
+        transparent 5px,
+        transparent 10px
+      );
+    }
+
+    .shape {
+      font-size: 2rem;
+      margin-top: 5px;
+      color: gold;
+      filter: drop-shadow(0 0 8px gold);
+    }
+
+    /* Slight variation in movement */
+    .slow { animation-duration: 4s; }
+    .fast { animation-duration: 2s; }
+
+    @keyframes swing {
+      0% { transform: rotate(3deg); }
+      50% { transform: rotate(-3deg); }
+      100% { transform: rotate(3deg); }
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-r from-green-700 to-black flex items-center justify-center min-h-screen px-4 relative overflow-hidden">
+
+  <!-- Blur shapes -->
+  <div class="lap lap1"></div>
+  <div class="lap lap2"></div>
+  <div class="lap lap3"></div>
+
+  <!-- Hanging Decorations (10 items) -->
+  <div class="decorations">
+
+    <div class="hang fast" style="left: 5%;">
+      <div class="string short"></div>
+      <div class="shape">🌙</div>
+    </div>
+
+    <div class="hang slow" style="left: 12%;">
+      <div class="string long"></div>
+      <div class="shape">⭐</div>
+    </div>
+
+    <div class="hang" style="left: 20%;">
+      <div class="string medium"></div>
+      <div class="shape">☁️</div>
+    </div>
+
+    <div class="hang fast" style="left: 30%;">
+      <div class="string short"></div>
+      <div class="shape">🕌</div>
+    </div>
+
+    <div class="hang slow" style="left: 40%;">
+      <div class="string long"></div>
+      <div class="shape">🌙</div>
+    </div>
+
+    <div class="hang" style="left: 50%;">
+      <div class="string medium"></div>
+      <div class="shape">⭐</div>
+    </div>
+
+    <div class="hang fast" style="left: 60%;">
+      <div class="string short"></div>
+      <div class="shape">☁️</div>
+    </div>
+
+    <div class="hang slow" style="left: 70%;">
+      <div class="string long"></div>
+      <div class="shape">🌙</div>
+    </div>
+
+    <div class="hang" style="left: 80%;">
+      <div class="string medium"></div>
+      <div class="shape">⭐</div>
+    </div>
+
+    <div class="hang fast" style="left: 90%;">
+      <div class="string short"></div>
+      <div class="shape">☁️</div>
+    </div>
+
+  </div>
+
+  <!-- Greeting card -->
+  <div class="text-center p-6 sm:p-8 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 w-full max-w-md z-10 relative">
+    
+    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">Eid Greeting✨</h1>
+
+    <p class="text-gray-200 mb-4 text-sm sm:text-base">
+      Wishing you and your family a joyful and blessed Eid 🤲✨  
+      May your life be filled with happiness, peace, and success 💖
+    </p>
+
+    <p class="text-yellow-300 text-base sm:text-lg mt-2">
+      From Husna Shaoib 💖
+    </p>
+
+    <p class="text-green-300 text-base sm:text-lg mt-4 font-semibold">
+      Thank You & remembering me in your prayers 💚✨
+    </p>
+
+    <a href="index.html"
+       class="bg-yellow-400 px-4 py-2 sm:px-6 sm:py-3 rounded-full font-bold hover:bg-yellow-500 mt-6 inline-block text-sm sm:text-base">
+       ⬅️ Back to Fireworks
+    </a>
+
+  </div>
+
+</body>
+</html>
